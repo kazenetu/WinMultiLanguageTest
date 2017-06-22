@@ -1,4 +1,5 @@
-﻿Imports System.Resources
+﻿Imports System.Globalization
+Imports System.Resources
 
 ''' <summary>
 ''' 言語ユーティリティ
@@ -44,20 +45,20 @@ Public Class LanguageUtil
         ' 言語リソースファイルを設定する
         Select Case language
             Case LanguageResources.Japanese
-                resourceFileName = "Resources\Resource_ja.resx"
+                resourceFileName = "ja-JP"
             Case LanguageResources.English
-                resourceFileName = "Resources\Resource_en.resx"
+                resourceFileName = "en-US"
         End Select
+
+        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageUtil).Assembly)
 
         ' リソースデータをクリアする
         Me._resource.Clear()
 
         ' リソースを読み込む
-        Using resxSet As New ResXResourceReader(resourceFileName)
-            For Each resource As DictionaryEntry In resxSet
-                Me._resource.Add(resource.Key, resource.Value)
-            Next
-        End Using
+        For Each resource As DictionaryEntry In rm.GetResourceSet(New CultureInfo(resourceFileName), True, False)
+            Me._resource.Add(resource.Key, resource.Value)
+        Next
     End Sub
 
     ''' <summary>
