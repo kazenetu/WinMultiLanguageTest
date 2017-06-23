@@ -2,9 +2,9 @@
 Imports System.Resources
 
 ''' <summary>
-''' 言語ユーティリティ
+''' 言語リソースユーティリティ
 ''' </summary>
-Public Class LanguageUtil
+Public Class LanguageResourceUtil
 
     Public Enum LanguageResources
         Japanese
@@ -14,7 +14,7 @@ Public Class LanguageUtil
     ''' <summary>
     ''' インスタンス
     ''' </summary>
-    Private Shared _instance As New LanguageUtil()
+    Private Shared _instance As New LanguageResourceUtil()
 
     ''' <summary>
     ''' リソースデータ
@@ -31,7 +31,7 @@ Public Class LanguageUtil
     ''' インスタンス取得
     ''' </summary>
     ''' <returns></returns>
-    Public Shared Function GetInstance() As LanguageUtil
+    Public Shared Function GetInstance() As LanguageResourceUtil
         Return _instance
     End Function
 
@@ -50,7 +50,7 @@ Public Class LanguageUtil
                 resourceFileName = "en-US"
         End Select
 
-        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageUtil).Assembly)
+        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageResourceUtil).Assembly)
 
         ' リソースデータをクリアする
         Me._resource.Clear()

@@ -1,4 +1,4 @@
-﻿Imports LanguageUtil.LanguageUtil
+﻿Imports LanguageUtil
 
 Public Class Form1
     Public Sub New()
@@ -7,8 +7,8 @@ Public Class Form1
 
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
         Dim languages As New Dictionary(Of String, String)
-        languages.Add(LanguageResources.Japanese, LanguageResources.Japanese.ToString())
-        languages.Add(LanguageResources.English, LanguageResources.English.ToString())
+        languages.Add(LanguageResourceUtil.LanguageResources.Japanese, LanguageResourceUtil.LanguageResources.Japanese.ToString())
+        languages.Add(LanguageResourceUtil.LanguageResources.English, LanguageResourceUtil.LanguageResources.English.ToString())
 
         Me.ComboBox1.DataSource = languages.ToList()
 
@@ -19,7 +19,7 @@ Public Class Form1
             Return
         End If
 
-        LanguageUtil.LanguageUtil.GetInstance().LoadLanguageResource(Me.ComboBox1.SelectedItem.key)
+        LanguageResourceUtil.GetInstance().LoadLanguageResource(Me.ComboBox1.SelectedItem.key)
 
         Dim mainForm = New MainForm()
         mainForm.ShowDialog()
