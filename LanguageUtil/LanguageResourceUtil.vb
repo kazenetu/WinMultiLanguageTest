@@ -65,6 +65,15 @@ Public Class LanguageResourceUtil
     ''' IDから言語に沿った文字列を返す
     ''' </summary>
     ''' <param name="id">ID</param>
+    ''' <returns>言語に沿った文字列</returns>
+    Public Function GetString(id As String) As String
+        Return GetString(id, {})
+    End Function
+
+    ''' <summary>
+    ''' IDから言語に沿った文字列を返す
+    ''' </summary>
+    ''' <param name="id">ID</param>
     ''' <param name="params">パラメータ</param>
     ''' <returns>言語に沿った文字列</returns>
     Public Function GetString(id As String, params() As String) As String
@@ -77,9 +86,5 @@ Public Class LanguageResourceUtil
 
         Return String.Format(result, params)
     End Function
-
-
-
-
 
 End Class
