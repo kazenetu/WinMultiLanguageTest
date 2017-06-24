@@ -7,4 +7,11 @@ Public Class MainForm
 
         MessageBox.Show(message)
     End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.Text = LanguageResourceUtil.GetInstance().GetString("S001000")
+        Me.Label1.Text = LanguageResourceUtil.GetInstance().GetString("S001001")
+        Me.Label2.Text = LanguageResourceUtil.GetInstance().GetString("S001002")
+
+    End Sub
 End Class
