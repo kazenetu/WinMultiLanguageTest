@@ -67,6 +67,10 @@ Public Class LanguageResourceUtil
     ''' <param name="id">ID</param>
     ''' <returns>言語に沿った文字列</returns>
     Public Function GetString(id As String) As String
+        If (Not Me._resource.Keys.Contains(id)) Then
+            Return String.Empty
+        End If
+
         Dim result As String = Me._resource(id)
 
         ' リソースデータにIDが存在しない場合は空文字を返す
