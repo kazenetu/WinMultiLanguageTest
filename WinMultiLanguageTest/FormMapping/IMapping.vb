@@ -1,4 +1,6 @@
-﻿''' <summary>
+﻿Imports LanguageUtil
+
+''' <summary>
 ''' リソースの情報をフォームのプロパティにセットする
 ''' </summary>
 Public Interface IMapping
@@ -6,5 +8,6 @@ Public Interface IMapping
     ''' フォームのプロパティに設定
     ''' </summary>
     ''' <param name="form">対象フォーム</param>
-    Sub SetProperties(ByVal form As Form)
+    ''' <param name="resource">リソースユーティリティのインスタンス</param>
+    Sub SetProperties(ByVal form As Form, ByVal resource As LanguageResourceUtil)
 End Interface

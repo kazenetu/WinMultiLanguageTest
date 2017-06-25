@@ -1,4 +1,5 @@
-﻿''' <summary>
+﻿Imports LanguageUtil
+''' <summary>
 ''' フォームマッピング
 ''' </summary>
 Public Class MappingManager
@@ -8,7 +9,7 @@ Public Class MappingManager
     ''' <param name="form">メインフォーム</param>
     Public Shared Sub SetProperties(ByVal form As MainForm)
         Dim targetMapper As IMapping = New MainWindowMapping()
-        targetMapper.SetProperties(form)
+        targetMapper.SetProperties(form, LanguageResourceUtil.GetInstance())
     End Sub
 
     ''' <summary>
@@ -17,6 +18,6 @@ Public Class MappingManager
     ''' <param name="form">フォーム1</param>
     Public Shared Sub SetProperties(ByVal form As Form1)
         Dim targetMapper As IMapping = New Form1Mapping()
-        targetMapper.SetProperties(form)
+        targetMapper.SetProperties(form, LanguageResourceUtil.GetInstance())
     End Sub
 End Class
