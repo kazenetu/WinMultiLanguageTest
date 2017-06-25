@@ -14,9 +14,9 @@ Public Class MainWindowMapping
         Dim target As MainForm = DirectCast(form, MainForm)
 
         ' フォームにリソースの値を設定
-        target.confirmMessage = LanguageResourceUtil.GetInstance().GetString("M001001")
-        target.Text = LanguageResourceUtil.GetInstance().GetString("S001000")
-        target.Label1.Text = LanguageResourceUtil.GetInstance().GetString("S001001")
-        target.Label2.Text = LanguageResourceUtil.GetInstance().GetString("S001002")
+        target.confirmMessage = LanguageResourceUtil.GetInstance().GetString(ResourceKeys.Keys.MainForm_確認)
+        target.Text = LanguageResourceUtil.GetInstance().GetString(ResourceKeys.Keys.MainForm_タイトル)
+        target.Label1.Text = LanguageResourceUtil.GetInstance().GetString(ResourceKeys.Keys.MainForm_ラベル1)
+        target.Label2.Text = LanguageResourceUtil.GetInstance().GetString(ResourceKeys.Keys.MainForm_ラベル2)
     End Sub
 End Class

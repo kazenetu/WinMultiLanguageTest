@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Form1_Button1" xml:space="preserve">
+  <data name="Form1_ボタン1" xml:space="preserve">
     <value>Open MainWindow</value>
   </data>
-  <data name="M001001" xml:space="preserve">
-    <value>Do you want to check the {0}?</value>
-  </data>
-  <data name="S001000" xml:space="preserve">
+  <data name="MainForm_タイトル" xml:space="preserve">
     <value>title</value>
   </data>
-  <data name="S001001" xml:space="preserve">
+  <data name="MainForm_ラベル1" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="S001002" xml:space="preserve">
+  <data name="MainForm_ラベル2" xml:space="preserve">
     <value>label2</value>
+  </data>
+  <data name="MainForm_確認" xml:space="preserve">
+    <value>Do you want to check the {0}?</value>
   </data>
 </root>
