@@ -24,4 +24,11 @@ Public Class Form1
         Dim mainForm = New MainForm()
         mainForm.ShowDialog()
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        LanguageResourceUtil.GetInstance().LoadLanguageResource(Me.ComboBox1.SelectedItem.key)
+
+        ' リソースの値をフォームのプロパティに設定
+        MappingManager.SetProperties(Me)
+    End Sub
 End Class

@@ -78,6 +78,7 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMapping\Form1Mapping.vb" />
     <Compile Include="FormMapping\IMapping.vb" />
     <Compile Include="FormMapping\MainWindowMapping.vb" />
     <Compile Include="FormMapping\MappingManager.vb" />
