@@ -67,16 +67,6 @@ Public Class LanguageResourceUtil
     ''' <param name="id">ID</param>
     ''' <returns>言語に沿った文字列</returns>
     Public Function GetString(id As String) As String
-        Return GetString(id, {})
-    End Function
-
-    ''' <summary>
-    ''' IDから言語に沿った文字列を返す
-    ''' </summary>
-    ''' <param name="id">ID</param>
-    ''' <param name="params">パラメータ</param>
-    ''' <returns>言語に沿った文字列</returns>
-    Public Function GetString(id As String, params() As String) As String
         Dim result As String = Me._resource(id)
 
         ' リソースデータにIDが存在しない場合は空文字を返す
@@ -84,7 +74,7 @@ Public Class LanguageResourceUtil
             Return String.Empty
         End If
 
-        Return String.Format(result, params)
+        Return result
     End Function
 
 End Class
