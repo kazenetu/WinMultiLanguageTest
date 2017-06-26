@@ -22,6 +22,11 @@ Public Class LanguageResourceUtil
     Private _resource As New Dictionary(Of String, String)
 
     ''' <summary>
+    ''' ロードしている言語
+    ''' </summary>
+    Private _loadedLanguage As LanguageResources
+
+    ''' <summary>
     ''' シングルトンのためプライベートコンストラクタ
     ''' </summary>
     Private Sub New()
@@ -50,6 +55,14 @@ Public Class LanguageResourceUtil
     End Function
 
     ''' <summary>
+    ''' 現在の言語を返す
+    ''' </summary>
+    ''' <returns>言語列挙型</returns>
+    Public Function GetLanguageResource() As LanguageResources
+        Return _loadedLanguage
+    End Function
+
+    ''' <summary>
     ''' 言語リソースを読み込む
     ''' </summary>
     ''' <param name="language">読み込む言語リソース</param>
@@ -73,6 +86,10 @@ Public Class LanguageResourceUtil
         For Each resource As DictionaryEntry In rm.GetResourceSet(New CultureInfo(resourceFileName), True, False)
             Me._resource.Add(resource.Key, resource.Value)
         Next
+
+        ' ロード済み言語を設定する
+        Me._loadedLanguage = language
+
     End Sub
 
     ''' <summary>
