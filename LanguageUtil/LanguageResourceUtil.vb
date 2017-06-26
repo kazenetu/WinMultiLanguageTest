@@ -36,6 +36,20 @@ Public Class LanguageResourceUtil
     End Function
 
     ''' <summary>
+    ''' 文字列の言語名を言語列挙型に変換する
+    ''' </summary>
+    ''' <param name="languageName">言語名</param>
+    ''' <returns>言語列挙型</returns>
+    Public Function ConvertStringToLanguageResource(ByVal languageName As String) As LanguageResources
+        For Each resource As LanguageResources In [Enum].GetValues(GetType(LanguageResources))
+            If resource.ToString() = languageName Then
+                Return resource
+            End If
+        Next
+        Return Nothing
+    End Function
+
+    ''' <summary>
     ''' 言語リソースを読み込む
     ''' </summary>
     ''' <param name="language">読み込む言語リソース</param>
