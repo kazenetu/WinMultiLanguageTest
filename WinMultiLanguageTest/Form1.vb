@@ -9,7 +9,8 @@ Public Class Form1
         Dim languages As New Dictionary(Of String, String)
         languages.Add(LanguageResourceUtil.LanguageResources.Japanese, LanguageResourceUtil.LanguageResources.Japanese.ToString())
         languages.Add(LanguageResourceUtil.LanguageResources.English, LanguageResourceUtil.LanguageResources.English.ToString())
-
+        Me.ComboBox1.DisplayMember = "value"
+        Me.ComboBox1.ValueMember = "key"
         Me.ComboBox1.DataSource = languages.ToList()
 
     End Sub
