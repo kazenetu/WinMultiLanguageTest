@@ -32,4 +32,8 @@ Public Class Form1
         ' リソースの値をフォームのプロパティに設定
         MappingManager.SetProperties(Me)
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Process.Start("ExeProject.exe", LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
+    End Sub
 End Class
