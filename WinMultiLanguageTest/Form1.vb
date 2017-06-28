@@ -1,4 +1,5 @@
-﻿Imports LanguageUtil
+﻿Imports System.IO
+Imports LanguageUtil
 
 Public Class Form1
     Public Sub New()
@@ -34,6 +35,13 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Process.Start("ExeProject.exe", LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
+
+        ' 連携ファイル書き出し
+        Using file As New StreamWriter("lang.txt")
+            file.Write(LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
+        End Using
+
+        ' 実行ファイルを呼び出し
+        Process.Start("ExeProject.exe")
     End Sub
 End Class

@@ -1,4 +1,5 @@
-﻿Imports LanguageUtil
+﻿Imports System.IO
+Imports LanguageUtil
 
 Public Class MainForm
     ''' <summary>
@@ -16,10 +17,11 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim languageNmae As String = LanguageResourceUtil.LanguageResources.Japanese.ToString()
 
-        Dim args = Environment.GetCommandLineArgs()
-        If args.Length > 1 Then
-            languageNmae = args(1)
-        End If
+        ' 連携ファイル読み出し
+        Using file As New StreamReader("lang.txt")
+            languageNmae = file.ReadToEnd()
+        End Using
+
         Dim resource = LanguageResourceUtil.GetInstance().ConvertStringToLanguageResource(languageNmae)
         LanguageResourceUtil.GetInstance().LoadLanguageResource(resource)
 
@@ -29,7 +31,7 @@ Public Class MainForm
 
     Private Sub SetProperties()
         ' フォームにリソースの値を設定
-        Dim resource = LanguageResourceUtil.getInstance()
+        Dim resource = LanguageResourceUtil.GetInstance()
         Me.confirmMessage = resource.GetString(ResourceKeys.Keys.MainForm_確認)
         Me.Text = resource.GetString(ResourceKeys.Keys.MainForm_タイトル)
         Me.Label1.Text = resource.GetString(ResourceKeys.Keys.MainForm_ラベル1)
