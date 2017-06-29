@@ -15,14 +15,14 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim languageNmae As String = LanguageResourceUtil.LanguageResources.Japanese.ToString()
+        Dim languageName As String = LanguageResourceUtil.LanguageResources.Japanese.ToString()
 
         ' 連携ファイル読み出し
         Using file As New StreamReader("lang.txt")
-            languageNmae = file.ReadToEnd()
+            languageName = file.ReadToEnd()
         End Using
 
-        Dim resource = LanguageResourceUtil.GetInstance().ConvertStringToLanguageResource(languageNmae)
+        Dim resource = LanguageResourceUtil.GetInstance().ConvertStringToLanguageResource(languageName)
         LanguageResourceUtil.GetInstance().LoadLanguageResource(resource)
 
         ' リソースの値をフォームのプロパティに設定
