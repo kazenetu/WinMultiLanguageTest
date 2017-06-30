@@ -1,4 +1,5 @@
 ﻿Imports System.Globalization
+Imports System.IO
 Imports System.Resources
 
 ''' <summary>
@@ -10,6 +11,11 @@ Public Class LanguageResourceUtil
         Japanese
         English
     End Enum
+
+    ''' <summary>
+    ''' 連携ファイル名
+    ''' </summary>
+    Private Const LANGUAGE_FILE As String = "lang.txt"
 
     ''' <summary>
     ''' インスタンス
@@ -120,6 +126,33 @@ Public Class LanguageResourceUtil
         End If
 
         Return result
+    End Function
+
+    ''' <summary>
+    ''' 連携ファイル出力
+    ''' </summary>
+    Public Sub WriteLanguageFile()
+        ' 連携ファイル書き出し
+        Using file As New StreamWriter(LANGUAGE_FILE)
+            file.Write(LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
+        End Using
+    End Sub
+
+    ''' <summary>
+    ''' 連携ファイル読み込み
+    ''' </summary>
+    ''' <returns>言語名</returns>
+    Public Function ReadLanguageFile() As String
+        Dim languageName As String = LanguageResources.Japanese.ToString
+
+        If File.Exists(LANGUAGE_FILE) Then
+            ' 連携ファイル読み出し
+            Using file As New StreamReader(LANGUAGE_FILE)
+                languageName = file.ReadToEnd()
+            End Using
+        End If
+
+        Return languageName
     End Function
 
 End Class
