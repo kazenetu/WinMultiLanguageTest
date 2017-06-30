@@ -15,12 +15,9 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim languageName As String = LanguageResourceUtil.LanguageResources.Japanese.ToString()
 
         ' 連携ファイル読み出し
-        Using file As New StreamReader("lang.txt")
-            languageName = file.ReadToEnd()
-        End Using
+        Dim languageName = LanguageResourceUtil.GetInstance().ReadLanguageFile()
 
         Dim resource = LanguageResourceUtil.GetInstance().ConvertStringToLanguageResource(languageName)
         LanguageResourceUtil.GetInstance().LoadLanguageResource(resource)

@@ -37,9 +37,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         ' 連携ファイル書き出し
-        Using file As New StreamWriter("lang.txt")
-            file.Write(LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
-        End Using
+        LanguageResourceUtil.GetInstance().WriteLanguageFile()
 
         ' 実行ファイルを呼び出し
         Process.Start("ExeProject.exe")
