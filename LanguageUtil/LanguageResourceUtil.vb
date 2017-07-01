@@ -99,16 +99,6 @@ Public Class LanguageResourceUtil
     End Sub
 
     ''' <summary>
-    ''' ResourceKeys.Keysの値から言語に沿った文字列を返す
-    ''' </summary>
-    ''' <param name="id">ID</param>
-    ''' <returns>言語に沿った文字列</returns>
-    Public Function GetString(id As ResourceKeys.Keys) As String
-        Return Me.GetString(id.ToString())
-    End Function
-
-
-    ''' <summary>
     ''' IDから言語に沿った文字列を返す
     ''' </summary>
     ''' <param name="id">ID</param>
