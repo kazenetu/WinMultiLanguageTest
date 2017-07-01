@@ -1,10 +1,14 @@
 ﻿Imports System.IO
 Imports LanguageUtil
 
-Public Class Form1
+Public Class F0000
+    Inherits BaseFrom
+
     Public Sub New()
         ' この呼び出しはデザイナーで必要です。
         InitializeComponent()
+
+        MyBase.formId = "Form1"
 
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
         Dim languages As New Dictionary(Of String, String)
@@ -16,7 +20,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles F0001.Click
         If Me.ComboBox1.SelectedItem Is Nothing Then
             Return
         End If
@@ -31,10 +35,10 @@ Public Class Form1
         LanguageResourceUtil.GetInstance().LoadLanguageResource(Me.ComboBox1.SelectedItem.key)
 
         ' リソースの値をフォームのプロパティに設定
-        MappingManager.SetProperties(Me)
+        MyBase.windowInitialize(Me)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles F0002.Click
 
         ' 連携ファイル書き出し
         LanguageResourceUtil.GetInstance().WriteLanguageFile()

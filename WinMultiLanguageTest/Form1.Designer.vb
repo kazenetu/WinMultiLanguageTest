@@ -1,9 +1,8 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
-    Inherits System.Windows.Forms.Form
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class F0000
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +19,11 @@ Partial Class Form1
     'メモ: 以下のプロシージャは Windows フォーム デザイナーで必要です。
     'Windows フォーム デザイナーを使用して変更できます。  
     'コード エディターを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.F0001 = New System.Windows.Forms.Button()
+        Me.F0002 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -35,39 +34,39 @@ Partial Class Form1
         Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
         Me.ComboBox1.TabIndex = 0
         '
-        'Button1
+        'F0001
         '
-        Me.Button1.Location = New System.Drawing.Point(88, 121)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "開く"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.F0001.Location = New System.Drawing.Point(88, 121)
+        Me.F0001.Name = "F0001"
+        Me.F0001.Size = New System.Drawing.Size(75, 23)
+        Me.F0001.TabIndex = 1
+        Me.F0001.Text = "開く"
+        Me.F0001.UseVisualStyleBackColor = True
         '
-        'Button2
+        'F0002
         '
-        Me.Button2.Location = New System.Drawing.Point(88, 197)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "exe実行"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.F0002.Location = New System.Drawing.Point(88, 197)
+        Me.F0002.Name = "F0002"
+        Me.F0002.Size = New System.Drawing.Size(75, 23)
+        Me.F0002.TabIndex = 2
+        Me.F0002.Text = "exe実行"
+        Me.F0002.UseVisualStyleBackColor = True
         '
-        'Form1
+        'F0000
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.F0002)
+        Me.Controls.Add(Me.F0001)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Name = "Form1"
+        Me.Name = "F0000"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents F0001 As Button
+    Friend WithEvents F0002 As Button
 End Class
