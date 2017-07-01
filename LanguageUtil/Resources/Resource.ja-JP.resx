@@ -126,6 +126,9 @@
   <data name="EXEMainFormF0002" xml:space="preserve">
     <value>(exe)ラベル2</value>
   </data>
+  <data name="EXEMainFormF0003" xml:space="preserve">
+    <value>(exe)メッセージ</value>
+  </data>
   <data name="EXEMainFormM0001" xml:space="preserve">
     <value>(exe){0}を確認しますか？</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="MainFormF0002" xml:space="preserve">
     <value>ラベル2</value>
+  </data>
+  <data name="MainFormF0003" xml:space="preserve">
+    <value>メッセージ</value>
   </data>
   <data name="MainFormM0001" xml:space="preserve">
     <value>{0}を確認しますか？</value>
