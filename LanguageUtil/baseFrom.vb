@@ -60,7 +60,7 @@ Public Class BaseFrom
 
         ' フォームの設定
         If TypeOf src Is Form Then
-            Me.setContorl(DirectCast(src, Form), text)
+            Me.setContorl(DirectCast(src, Form), Me.getString("F0000"))
             Return
         End If
 
