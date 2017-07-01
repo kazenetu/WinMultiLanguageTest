@@ -129,8 +129,14 @@
   <data name="EXEMainFormM0001" xml:space="preserve">
     <value>(exe)Do you want to check the {0}?</value>
   </data>
+  <data name="Form1F0000" xml:space="preserve">
+    <value>launcher</value>
+  </data>
   <data name="Form1F0001" xml:space="preserve">
     <value>Open MainWindow</value>
+  </data>
+  <data name="Form1F0002" xml:space="preserve">
+    <value>Call exe</value>
   </data>
   <data name="MainFormF0000" xml:space="preserve">
     <value>title</value>

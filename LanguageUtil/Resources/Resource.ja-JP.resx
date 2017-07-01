@@ -129,8 +129,14 @@
   <data name="EXEMainFormM0001" xml:space="preserve">
     <value>(exe){0}を確認しますか？</value>
   </data>
+  <data name="Form1F0000" xml:space="preserve">
+    <value>スタート画面</value>
+  </data>
   <data name="Form1F0001" xml:space="preserve">
     <value>メインフォームを開く</value>
+  </data>
+  <data name="Form1F0002" xml:space="preserve">
+    <value>exe実行</value>
   </data>
   <data name="MainFormF0000" xml:space="preserve">
     <value>タイトル</value>
