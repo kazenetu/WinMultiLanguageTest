@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports LanguageUtil
 
-Public Class F0000
+Public Class Form1
     Inherits BaseFrom
 
     Public Sub New()
