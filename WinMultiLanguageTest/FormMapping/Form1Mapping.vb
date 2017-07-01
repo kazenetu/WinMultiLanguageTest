@@ -14,6 +14,6 @@ Public Class Form1Mapping
         Dim target = DirectCast(form, Form1)
 
         ' フォームにリソースの値を設定
-        target.Button1.Text = resource.GetString(ResourceKeys.Keys.Form1_ボタン1)
+        target.F0001.Text = resource.GetString(ResourceKeys.Keys.Form1_ボタン1)
     End Sub
 End Class

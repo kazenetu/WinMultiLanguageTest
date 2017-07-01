@@ -1,20 +1,23 @@
 ﻿Imports LanguageUtil
 
 Public Class MainForm
-    ''' <summary>
-    ''' 確認メッセージ
-    ''' </summary>
-    ''' <returns></returns>
-    Public Property confirmMessage As String
+    Inherits BaseFrom
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim message As String = String.Format(confirmMessage, "aaa")
+    Public Sub New()
+        ' この呼び出しはデザイナーで必要です。
+        InitializeComponent()
+
+        ' InitializeComponent() 呼び出しの後で初期化を追加します。
+        MyBase.formId = "MainForm"
+
+        ' リソースの値をフォームのプロパティに設定
+        MyBase.windowInitialize(Me)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles F0003.Click
+        Dim message As String = String.Format(MyBase.getString("M0001"), "aaa")
 
         MessageBox.Show(message)
     End Sub
 
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ' リソースの値をフォームのプロパティに設定
-        MappingManager.SetProperties(Me)
-    End Sub
 End Class

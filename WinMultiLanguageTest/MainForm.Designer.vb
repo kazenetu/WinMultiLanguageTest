@@ -1,9 +1,8 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
-    Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,48 +19,48 @@ Partial Class MainForm
     'メモ: 以下のプロシージャは Windows フォーム デザイナーで必要です。
     'Windows フォーム デザイナーを使用して変更できます。  
     'コード エディターを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.F0001 = New System.Windows.Forms.Label()
+        Me.F0002 = New System.Windows.Forms.Label()
+        Me.F0003 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'F0001
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 12)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.F0001.AutoSize = True
+        Me.F0001.Location = New System.Drawing.Point(23, 13)
+        Me.F0001.Name = "F0001"
+        Me.F0001.Size = New System.Drawing.Size(38, 12)
+        Me.F0001.TabIndex = 0
+        Me.F0001.Text = "Label1"
         '
-        'Label2
+        'F0002
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 42)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 12)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
+        Me.F0002.AutoSize = True
+        Me.F0002.Location = New System.Drawing.Point(25, 42)
+        Me.F0002.Name = "F0002"
+        Me.F0002.Size = New System.Drawing.Size(38, 12)
+        Me.F0002.TabIndex = 1
+        Me.F0002.Text = "Label2"
         '
-        'Button1
+        'F0003
         '
-        Me.Button1.Location = New System.Drawing.Point(97, 141)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.F0003.Location = New System.Drawing.Point(42, 141)
+        Me.F0003.Name = "F0003"
+        Me.F0003.Size = New System.Drawing.Size(174, 23)
+        Me.F0003.TabIndex = 2
+        Me.F0003.Text = "Button1"
+        Me.F0003.UseVisualStyleBackColor = True
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.F0003)
+        Me.Controls.Add(Me.F0002)
+        Me.Controls.Add(Me.F0001)
         Me.Name = "MainForm"
         Me.Text = "MainForm"
         Me.ResumeLayout(False)
@@ -69,7 +68,7 @@ Partial Class MainForm
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents F0001 As Label
+    Friend WithEvents F0002 As Label
+    Friend WithEvents F0003 As Button
 End Class
