@@ -11,6 +11,8 @@ Public Class Program
         Dim resource = LanguageResourceUtil.GetInstance().ConvertStringToLanguageResource(languageName)
         LanguageResourceUtil.GetInstance().LoadLanguageResource(resource)
 
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New MainForm())
     End Sub
 End Class
