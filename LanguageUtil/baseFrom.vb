@@ -22,7 +22,7 @@ Public Class BaseFrom
     ''' <param name="id">コントロールID</param>
     ''' <returns>言語に沿った文字列</returns>
     Protected Function getString(ByVal id As String) As String
-        Dim text As String = LanguageResourceUtil.GetInstance().GetString(Me.formId & id)
+        Dim text As String = LanguageResourceUtility.GetInstance().GetString(Me.formId & id)
 
         ' 値がなければその旨を設定
         If String.IsNullOrEmpty(text) Then

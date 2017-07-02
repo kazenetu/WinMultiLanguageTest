@@ -5,7 +5,7 @@ Imports System.Resources
 ''' <summary>
 ''' 言語リソースユーティリティ
 ''' </summary>
-Public Class LanguageResourceUtil
+Public Class LanguageResourceUtility
 
     Public Enum LanguageResources
         Japanese
@@ -20,7 +20,7 @@ Public Class LanguageResourceUtil
     ''' <summary>
     ''' インスタンス
     ''' </summary>
-    Private Shared _instance As New LanguageResourceUtil()
+    Private Shared _instance As New LanguageResourceUtility()
 
     ''' <summary>
     ''' リソースデータ
@@ -42,7 +42,7 @@ Public Class LanguageResourceUtil
     ''' インスタンス取得
     ''' </summary>
     ''' <returns></returns>
-    Public Shared Function GetInstance() As LanguageResourceUtil
+    Public Shared Function GetInstance() As LanguageResourceUtility
         Return _instance
     End Function
 
@@ -83,7 +83,7 @@ Public Class LanguageResourceUtil
                 resourceFileName = "en-US"
         End Select
 
-        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageResourceUtil).Assembly)
+        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageResourceUtility).Assembly)
 
         ' リソースデータをクリアする
         Me._resource.Clear()
@@ -124,7 +124,7 @@ Public Class LanguageResourceUtil
     Public Sub WriteLanguageFile()
         ' 連携ファイル書き出し
         Using file As New StreamWriter(LANGUAGE_FILE)
-            file.Write(LanguageResourceUtil.GetInstance().GetLanguageResource().ToString())
+            file.Write(LanguageResourceUtility.GetInstance().GetLanguageResource().ToString())
         End Using
     End Sub
 
