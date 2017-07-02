@@ -122,9 +122,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LanguageUtil\LanguageUtil.vbproj">
+    <ProjectReference Include="..\LanguageUtil\MultiLanguageUtility.vbproj">
       <Project>{37EBEB06-7764-4745-9B31-CFDDE23D2E2C}</Project>
-      <Name>LanguageUtil</Name>
+      <Name>MultiLanguageUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

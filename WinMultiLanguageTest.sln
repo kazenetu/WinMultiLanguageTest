@@ -9,7 +9,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinMultiLanguageTest", "Win
 		{C0744409-60E2-4884-8050-B8DA9A3FFA3E} = {C0744409-60E2-4884-8050-B8DA9A3FFA3E}
 	EndProjectSection
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LanguageUtil", "LanguageUtil\LanguageUtil.vbproj", "{37EBEB06-7764-4745-9B31-CFDDE23D2E2C}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MultiLanguageUtility", "LanguageUtil\MultiLanguageUtility.vbproj", "{37EBEB06-7764-4745-9B31-CFDDE23D2E2C}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExeProject", "ExeProject\ExeProject.vbproj", "{C0744409-60E2-4884-8050-B8DA9A3FFA3E}"
 	ProjectSection(ProjectDependencies) = postProject

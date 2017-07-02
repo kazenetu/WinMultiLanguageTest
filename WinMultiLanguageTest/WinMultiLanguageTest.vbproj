@@ -131,9 +131,9 @@
       <Project>{c0744409-60e2-4884-8050-b8da9a3ffa3e}</Project>
       <Name>ExeProject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LanguageUtil\LanguageUtil.vbproj">
+    <ProjectReference Include="..\LanguageUtil\MultiLanguageUtility.vbproj">
       <Project>{37EBEB06-7764-4745-9B31-CFDDE23D2E2C}</Project>
-      <Name>LanguageUtil</Name>
+      <Name>MultiLanguageUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
