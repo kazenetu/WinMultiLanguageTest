@@ -124,7 +124,7 @@ Public Class LanguageResourceUtility
     Public Sub WriteLanguageFile()
         ' 連携ファイル書き出し
         Using file As New StreamWriter(LANGUAGE_FILE)
-            file.Write(LanguageResourceUtility.GetInstance().GetLanguageResource().ToString())
+            file.Write(Me._loadedLanguage.ToString())
         End Using
     End Sub
 
