@@ -19,6 +19,12 @@ MultiLanguageUtility
  * __コントロールID__ はコントロール.Nameで設定  
    (フォームは __F0000__  固定)  
 * サブクラスではコンストラクタで画面の初期化を行う  
-  例： ``` MyBase.windowInitialize(Me) ```
+  例：  
+  ``` vb.net
+  MyBase.windowInitialize(Me)
+  ```
 * 別のフィールドなどを参照するコントロールやメッセージはソースコードで実装する  
-  例： ``` MessageBox.Show(String.Format(MyBase.getString("M0001"), "aaa")) ```
+  例：  
+  ``` vb.net
+  MessageBox.Show(String.Format(MyBase.getString("M0001"), "aaa"))
+  ```
