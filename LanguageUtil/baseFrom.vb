@@ -12,17 +12,12 @@ Public Class BaseFrom
     Private Const RESOURCE_NONE As String = "----"
 
     ''' <summary>
-    ''' フォームID
-    ''' </summary>
-    Protected formId As String = ""
-
-    ''' <summary>
     ''' IDから言語に沿った文字列を返す
     ''' </summary>
     ''' <param name="id">コントロールID</param>
     ''' <returns>言語に沿った文字列</returns>
     Protected Function getString(ByVal id As String) As String
-        Dim text As String = LanguageResourceUtility.GetInstance().GetString(Me.formId & id)
+        Dim text As String = LanguageResourceUtility.GetInstance().GetString(id)
 
         ' 値がなければその旨を設定
         If String.IsNullOrEmpty(text) Then
@@ -58,12 +53,6 @@ Public Class BaseFrom
     ''' <param name="text">設定テキスト</param>
     Private Sub setContorl(ByVal src As Object, ByVal text As String)
 
-        ' フォームの設定
-        If TypeOf src Is Form Then
-            Me.setContorl(DirectCast(src, Form), Me.getString("F0000"))
-            Return
-        End If
-
         ' ラベルの設定
         If TypeOf src Is Label Then
             Me.setContorl(DirectCast(src, Label), text)
@@ -76,15 +65,6 @@ Public Class BaseFrom
             Return
         End If
 
-    End Sub
-
-    ''' <summary>
-    ''' コントロールのテキスト設定：フォーム
-    ''' </summary>
-    ''' <param name="src">対象コントロール</param>
-    ''' <param name="text">設定テキスト</param>
-    Private Sub setContorl(ByVal src As Form, ByVal text As String)
-        src.Text = text
     End Sub
 
     ''' <summary>
