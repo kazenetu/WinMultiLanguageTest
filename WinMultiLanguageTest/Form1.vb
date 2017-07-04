@@ -8,8 +8,6 @@ Public Class Form1
         ' この呼び出しはデザイナーで必要です。
         InitializeComponent()
 
-        MyBase.formId = "Form1"
-
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
         Dim languages As New Dictionary(Of String, String)
         languages.Add(LanguageResourceUtility.LanguageResources.Japanese, LanguageResourceUtility.LanguageResources.Japanese.ToString())
@@ -20,7 +18,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles F0001.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Form1F0001.Click
         If Me.ComboBox1.SelectedItem Is Nothing Then
             Return
         End If
@@ -36,9 +34,10 @@ Public Class Form1
 
         ' リソースの値をフォームのプロパティに設定
         MyBase.windowInitialize(Me)
+        Me.Text = Me.getString("Form1F0000")
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles F0002.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Form1F0002.Click
 
         ' 連携ファイル書き出し
         LanguageResourceUtility.GetInstance().WriteLanguageFile()

@@ -22,8 +22,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.F0001 = New System.Windows.Forms.Button()
-        Me.F0002 = New System.Windows.Forms.Button()
+        Me.Form1F0001 = New System.Windows.Forms.Button()
+        Me.Form1F0002 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -34,39 +34,39 @@ Partial Class Form1
         Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
         Me.ComboBox1.TabIndex = 0
         '
-        'F0001
+        'Form1F0001
         '
-        Me.F0001.Location = New System.Drawing.Point(88, 121)
-        Me.F0001.Name = "F0001"
-        Me.F0001.Size = New System.Drawing.Size(75, 23)
-        Me.F0001.TabIndex = 1
-        Me.F0001.Text = "開く"
-        Me.F0001.UseVisualStyleBackColor = True
+        Me.Form1F0001.Location = New System.Drawing.Point(88, 121)
+        Me.Form1F0001.Name = "Form1F0001"
+        Me.Form1F0001.Size = New System.Drawing.Size(75, 23)
+        Me.Form1F0001.TabIndex = 1
+        Me.Form1F0001.Text = "開く"
+        Me.Form1F0001.UseVisualStyleBackColor = True
         '
-        'F0002
+        'Form1F0002
         '
-        Me.F0002.Location = New System.Drawing.Point(88, 197)
-        Me.F0002.Name = "F0002"
-        Me.F0002.Size = New System.Drawing.Size(75, 23)
-        Me.F0002.TabIndex = 2
-        Me.F0002.Text = "exe実行"
-        Me.F0002.UseVisualStyleBackColor = True
+        Me.Form1F0002.Location = New System.Drawing.Point(88, 197)
+        Me.Form1F0002.Name = "Form1F0002"
+        Me.Form1F0002.Size = New System.Drawing.Size(75, 23)
+        Me.Form1F0002.TabIndex = 2
+        Me.Form1F0002.Text = "exe実行"
+        Me.Form1F0002.UseVisualStyleBackColor = True
         '
-        'F0000
+        'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.F0002)
-        Me.Controls.Add(Me.F0001)
+        Me.Controls.Add(Me.Form1F0002)
+        Me.Controls.Add(Me.Form1F0001)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Name = "F0000"
+        Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents F0001 As Button
-    Friend WithEvents F0002 As Button
+    Friend WithEvents Form1F0001 As Button
+    Friend WithEvents Form1F0002 As Button
 End Class
