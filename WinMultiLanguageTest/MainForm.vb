@@ -8,14 +8,15 @@ Public Class MainForm
         InitializeComponent()
 
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
-        MyBase.formId = "MainForm"
 
         ' リソースの値をフォームのプロパティに設定
         MyBase.windowInitialize(Me)
+
+        Me.Text = Me.getString("MainFormF0000")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles F0003.Click
-        Dim message As String = String.Format(MyBase.getString("M0001"), "aaa")
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles MainFormF0003.Click
+        Dim message As String = String.Format(MyBase.getString("MainFormM0001"), "aaa")
 
         MessageBox.Show(message)
     End Sub
