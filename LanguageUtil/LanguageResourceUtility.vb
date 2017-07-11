@@ -73,25 +73,29 @@ Public Class LanguageResourceUtility
     ''' </summary>
     ''' <param name="language">読み込む言語リソース</param>
     Public Sub LoadLanguageResource(language As LanguageResources)
-        Dim resourceFileName As String = String.Empty
+        Dim languageName As String = String.Empty
 
-        ' 言語リソースファイルを設定する
+        ' 言語名を設定する
         Select Case language
             Case LanguageResources.Japanese
-                resourceFileName = "ja-JP"
+                languageName = "日本語"
             Case LanguageResources.English
-                resourceFileName = "en-US"
+                languageName = "英語"
         End Select
 
-        Dim rm As New ResourceManager("LanguageUtil.Resource", GetType(LanguageResourceUtility).Assembly)
+        ' Excelファイルからリソースファイルを生成する
+        Dim excel2Resource As New ExcelToResource()
+        Dim resourceFileName As String = excel2Resource.GenerateResource("dummy_id.xlsx", "target", languageName)
 
         ' リソースデータをクリアする
         Me._resource.Clear()
 
         ' リソースを読み込む
-        For Each resource As DictionaryEntry In rm.GetResourceSet(New CultureInfo(resourceFileName), True, False)
-            Me._resource.Add(resource.Key, resource.Value)
-        Next
+        Using reader As New ResXResourceReader(resourceFileName)
+            For Each entry As System.Collections.DictionaryEntry In reader
+                Me._resource.Add(entry.Key, entry.Value)
+            Next
+        End Using
 
         ' ロード済み言語を設定する
         Me._loadedLanguage = language

@@ -18,7 +18,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Form1F0001.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles W0002P0001.Click
         If Me.ComboBox1.SelectedItem Is Nothing Then
             Return
         End If
@@ -34,10 +34,10 @@ Public Class Form1
 
         ' リソースの値をフォームのプロパティに設定
         MyBase.windowInitialize(Me)
-        Me.Text = Me.getString("Form1F0000")
+        Me.Text = Me.getString("W0002P0000")
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Form1F0002.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles W0002P0002.Click
 
         ' 連携ファイル書き出し
         LanguageResourceUtility.GetInstance().WriteLanguageFile()

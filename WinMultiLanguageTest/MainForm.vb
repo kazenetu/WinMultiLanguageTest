@@ -12,11 +12,11 @@ Public Class MainForm
         ' リソースの値をフォームのプロパティに設定
         MyBase.windowInitialize(Me)
 
-        Me.Text = Me.getString("MainFormF0000")
+        Me.Text = Me.getString("W0003P0000")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles MainFormF0003.Click
-        Dim message As String = String.Format(MyBase.getString("MainFormM0001"), "aaa")
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles W0003P0003.Click
+        Dim message As String = String.Format(MyBase.getString("W0003P0004"), "aaa")
 
         MessageBox.Show(message)
     End Sub

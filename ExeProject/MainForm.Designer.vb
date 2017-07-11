@@ -21,46 +21,46 @@ Partial Class MainForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.EXEMainFormF0001 = New System.Windows.Forms.Label()
-        Me.EXEMainFormF0002 = New System.Windows.Forms.Label()
-        Me.EXEMainFormF0003 = New System.Windows.Forms.Button()
+        Me.E0001P0001 = New System.Windows.Forms.Label()
+        Me.E0001P0002 = New System.Windows.Forms.Label()
+        Me.E0001P0003 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'EXEMainFormF0001
+        'E0001P0001
         '
-        Me.EXEMainFormF0001.AutoSize = True
-        Me.EXEMainFormF0001.Location = New System.Drawing.Point(23, 13)
-        Me.EXEMainFormF0001.Name = "EXEMainFormF0001"
-        Me.EXEMainFormF0001.Size = New System.Drawing.Size(38, 12)
-        Me.EXEMainFormF0001.TabIndex = 0
-        Me.EXEMainFormF0001.Text = "Label1"
+        Me.E0001P0001.AutoSize = True
+        Me.E0001P0001.Location = New System.Drawing.Point(23, 13)
+        Me.E0001P0001.Name = "E0001P0001"
+        Me.E0001P0001.Size = New System.Drawing.Size(38, 12)
+        Me.E0001P0001.TabIndex = 0
+        Me.E0001P0001.Text = "Label1"
         '
-        'EXEMainFormF0002
+        'E0001P0002
         '
-        Me.EXEMainFormF0002.AutoSize = True
-        Me.EXEMainFormF0002.Location = New System.Drawing.Point(25, 42)
-        Me.EXEMainFormF0002.Name = "EXEMainFormF0002"
-        Me.EXEMainFormF0002.Size = New System.Drawing.Size(38, 12)
-        Me.EXEMainFormF0002.TabIndex = 1
-        Me.EXEMainFormF0002.Text = "Label2"
+        Me.E0001P0002.AutoSize = True
+        Me.E0001P0002.Location = New System.Drawing.Point(25, 42)
+        Me.E0001P0002.Name = "E0001P0002"
+        Me.E0001P0002.Size = New System.Drawing.Size(38, 12)
+        Me.E0001P0002.TabIndex = 1
+        Me.E0001P0002.Text = "Label2"
         '
-        'EXEMainFormF0003
+        'E0001P0003
         '
-        Me.EXEMainFormF0003.Location = New System.Drawing.Point(59, 141)
-        Me.EXEMainFormF0003.Name = "EXEMainFormF0003"
-        Me.EXEMainFormF0003.Size = New System.Drawing.Size(139, 23)
-        Me.EXEMainFormF0003.TabIndex = 2
-        Me.EXEMainFormF0003.Text = "Button1"
-        Me.EXEMainFormF0003.UseVisualStyleBackColor = True
+        Me.E0001P0003.Location = New System.Drawing.Point(59, 141)
+        Me.E0001P0003.Name = "E0001P0003"
+        Me.E0001P0003.Size = New System.Drawing.Size(139, 23)
+        Me.E0001P0003.TabIndex = 2
+        Me.E0001P0003.Text = "Button1"
+        Me.E0001P0003.UseVisualStyleBackColor = True
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.EXEMainFormF0003)
-        Me.Controls.Add(Me.EXEMainFormF0002)
-        Me.Controls.Add(Me.EXEMainFormF0001)
+        Me.Controls.Add(Me.E0001P0003)
+        Me.Controls.Add(Me.E0001P0002)
+        Me.Controls.Add(Me.E0001P0001)
         Me.Name = "MainForm"
         Me.Text = "MainForm"
         Me.ResumeLayout(False)
@@ -68,7 +68,7 @@ Partial Class MainForm
 
     End Sub
 
-    Friend WithEvents EXEMainFormF0001 As Label
-    Friend WithEvents EXEMainFormF0002 As Label
-    Friend WithEvents EXEMainFormF0003 As Button
+    Friend WithEvents E0001P0001 As Label
+    Friend WithEvents E0001P0002 As Label
+    Friend WithEvents E0001P0003 As Button
 End Class
