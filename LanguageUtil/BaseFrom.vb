@@ -17,6 +17,11 @@ Public Class BaseFrom
     ''' <param name="id">コントロールID</param>
     ''' <returns>言語に沿った文字列</returns>
     Protected Function getString(ByVal id As String) As String
+        ' idがなければ空文字を
+        If String.IsNullOrEmpty(id) Then
+            Return String.Empty
+        End If
+
         Dim text As String = LanguageResourceUtility.GetInstance().GetString(id)
 
         ' 値がなければその旨を設定
