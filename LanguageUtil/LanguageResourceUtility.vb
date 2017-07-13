@@ -1,4 +1,5 @@
-﻿Imports System.Globalization
+﻿Imports System.Environment
+Imports System.Globalization
 Imports System.IO
 Imports System.Resources
 
@@ -126,8 +127,10 @@ Public Class LanguageResourceUtility
     ''' 連携ファイル出力
     ''' </summary>
     Public Sub WriteLanguageFile()
+        Dim languageFilePath As String = Path.Combine(GetFolderPath(SpecialFolder.LocalApplicationData), LANGUAGE_FILE)
+
         ' 連携ファイル書き出し
-        Using file As New StreamWriter(LANGUAGE_FILE)
+        Using file As New StreamWriter(languageFilePath)
             file.Write(Me._loadedLanguage.ToString())
         End Using
     End Sub
@@ -139,9 +142,10 @@ Public Class LanguageResourceUtility
     Public Function ReadLanguageFile() As String
         Dim languageName As String = LanguageResources.Japanese.ToString
 
-        If File.Exists(LANGUAGE_FILE) Then
+        Dim languageFilePath As String = Path.Combine(GetFolderPath(SpecialFolder.LocalApplicationData), LANGUAGE_FILE)
+        If File.Exists(languageFilePath) Then
             ' 連携ファイル読み出し
-            Using file As New StreamReader(LANGUAGE_FILE)
+            Using file As New StreamReader(languageFilePath)
                 languageName = file.ReadToEnd()
             End Using
         End If
