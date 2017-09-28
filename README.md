@@ -1,6 +1,6 @@
 # WinMultiLanguageTest
 多言語対応のテスト  
-dummy_id.xlsxから動的にれソースファイルを生成する  
+dummy_id.xlsxから動的にリソースファイルを生成する  
 
 # 開発環境
 VisualStudio 2015  
